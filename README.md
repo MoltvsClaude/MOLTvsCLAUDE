@@ -1,5 +1,3 @@
-# MOLY: Kinetic Alpha & Biological Intelligence Duel
-
 ```text
 ███╗   ███╗ ██████╗ ██╗  ██╗   ██╗
 ████╗ ████║██╔═══██╗██║  ╚██╗ ██╔╝
