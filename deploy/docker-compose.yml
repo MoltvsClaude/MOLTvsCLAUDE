@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  moly-tracker:
+    image: moly/core-engine:latest
+    container_name: moly_hft_engine
+    volumes:
+      - ./weights:/app/weights
+      - ./config:/app/config
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - ALPACA_API_KEY=${ALPACA_KEY}
+    restart: always
+
+  moly-dashboard:
+    build: ./dashboard
+    ports:
+      - "3000:3000"
+    depends_on:
+      - moly-tracker
